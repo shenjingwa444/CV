@@ -1,4 +1,4 @@
-let html = document.querySelector('#html')
+let html = document.querySelector("#html");
 let style = document.querySelector("#style");
 let string = `
 /*你好，我是一名前端新人
@@ -26,55 +26,43 @@ let string = `
 }
 /*下面添加两个阵眼*/
 #div1::before {
-    position:absolute;
-    width:100px;
-    height:100px;
     top:0;
-    left:0;
     left:50%;
-    transform:translate(-50%);
+    transform:translateX(-50%);
     border-radius:50%;
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(0,0,0,1) 25%);
     word-wrap: break-all;
 }
-    
-    #div1::after {
-    position:absolute;
-    width:100px;
-    height:100px;
+#div1::after {
     bottom:0;
-    left:0;
     left:50%;
-    transform:translate(-50%);
+    transform:translateX(-50%);
     border-radius:50%;
     background: rgb(0,0,0);
     background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,1) 25%);
     word-wrap: break-all;
 }
-`
+`;
 let n = 0;
-let string2 = '';
-let step = ()=>{
-    setTimeout(()=>{
-        if(string[n]==='\n'){
-            string2 += "<br>";
-        }else if(string[n]===' '){
-            string2 += "&nbsp";
-        }else{
-            string2 += string[n];
-        }
-        html.innerHTML = string2;
-        style.innerHTML = string.substring(0,n);
-        window.scrollTo(0,document.body.scrollHeight)
-        html.scrollTo(0,99999)
-        if (n < string.length-1){
-            n = n + 1;
-            step();
-        }   
-    },0)
-}
+let string2 = "";
+let step = () => {
+  setTimeout(() => {
+    if (string[n] === "\n") {
+      string2 += "<br>";
+    } else if (string[n] === " ") {
+      string2 += "&nbsp";
+    } else {
+      string2 += string[n];
+    }
+    html.innerHTML = string2;
+    style.innerHTML = string.substring(0, n);
+    window.scrollTo(0, document.body.scrollHeight);
+    html.scrollTo(0, 99999);
+    if (n < string.length - 1) {
+      n = n + 1;
+      step();
+    }
+  }, 0);
+};
 step();
-
-
-

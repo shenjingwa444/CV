@@ -118,17 +118,17 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"main.js":[function(require,module,exports) {
-var html = document.querySelector('#html');
+var html = document.querySelector("#html");
 var style = document.querySelector("#style");
-var string = "\n/*\u4F60\u597D\uFF0C\u6211\u662F\u4E00\u540D\u524D\u7AEF\u65B0\u4EBA\n*\u63A5\u4E0B\u6765\u6211\u8981\u52A0\u6837\u5F0F\u4E86\n*\u9996\u5148\u52A0\u4E00\u4E2Adiv\n*\u7136\u540E\uFF0C\u51C6\u5907\u4E00\u4E2Adiv\n*/\n#div1{\n    border:1px solid red;\n    width:200px;\n    height:200px;\n    \n   }\n/*\u7136\u540E\uFF0C\u5C06div\u53D8\u6210\u4E00\u4E2A\u5706*/\n#div1{\n    border-radius:50%;\n    box-shadow:0 0 3px rgba(0,0,0,0.5);\n    border:none;\n}\n/*\u518D\u5C06\u5706\u5206\u6210\u5DE6\u9ED1\u53F3\u767D*/\n#div1{\n    background: rgb(255,255,255);\n    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);\n    word-wrap: break-all;\n}\n/*\u4E0B\u9762\u6DFB\u52A0\u4E24\u4E2A\u9635\u773C*/\n#div1::before {\n    position:absolute;\n    width:100px;\n    height:100px;\n    top:0;\n    left:0;\n    left:50%;\n    transform:translate(-50%);\n    border-radius:50%;\n    background: rgb(255,255,255);\n    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(0,0,0,1) 25%);\n    word-wrap: break-all;\n}\n    \n    #div1::after {\n    position:absolute;\n    width:100px;\n    height:100px;\n    bottom:0;\n    left:0;\n    left:50%;\n    transform:translate(-50%);\n    border-radius:50%;\n    background: rgb(0,0,0);\n    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,1) 25%);\n    word-wrap: break-all;\n}\n";
+var string = "\n/*\u4F60\u597D\uFF0C\u6211\u662F\u4E00\u540D\u524D\u7AEF\u65B0\u4EBA\n*\u63A5\u4E0B\u6765\u6211\u8981\u52A0\u6837\u5F0F\u4E86\n*\u9996\u5148\u52A0\u4E00\u4E2Adiv\n*\u7136\u540E\uFF0C\u51C6\u5907\u4E00\u4E2Adiv\n*/\n#div1{\n    border:1px solid red;\n    width:200px;\n    height:200px;\n    \n   }\n/*\u7136\u540E\uFF0C\u5C06div\u53D8\u6210\u4E00\u4E2A\u5706*/\n#div1{\n    border-radius:50%;\n    box-shadow:0 0 3px rgba(0,0,0,0.5);\n    border:none;\n}\n/*\u518D\u5C06\u5706\u5206\u6210\u5DE6\u9ED1\u53F3\u767D*/\n#div1{\n    background: rgb(255,255,255);\n    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);\n    word-wrap: break-all;\n}\n/*\u4E0B\u9762\u6DFB\u52A0\u4E24\u4E2A\u9635\u773C*/\n#div1::before {\n    top:0;\n    left:50%;\n    transform:translateX(-50%);\n    border-radius:50%;\n    background: rgb(255,255,255);\n    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(0,0,0,1) 25%);\n    word-wrap: break-all;\n}\n#div1::after {\n    bottom:0;\n    left:50%;\n    transform:translateX(-50%);\n    border-radius:50%;\n    background: rgb(0,0,0);\n    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,1) 25%);\n    word-wrap: break-all;\n}\n";
 var n = 0;
-var string2 = '';
+var string2 = "";
 
 var step = function step() {
   setTimeout(function () {
-    if (string[n] === '\n') {
+    if (string[n] === "\n") {
       string2 += "<br>";
-    } else if (string[n] === ' ') {
+    } else if (string[n] === " ") {
       string2 += "&nbsp";
     } else {
       string2 += string[n];
@@ -175,7 +175,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53491" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59841" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
